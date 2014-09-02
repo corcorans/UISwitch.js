@@ -1,0 +1,29 @@
+{
+  "name": "UISwitch.js",
+  "version": "0.0.0",
+  "description": "Implements Apple's UISwitch in Javascript",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corcorans/UISwitch.js.git"
+  },
+  "keywords": [
+    "apple",
+    "uiswitch",
+    "switch",
+    "checkbox",
+    "checkboxes"
+  ],
+  "author": "Stephen Corcoran, Daniel Imhoff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/corcorans/UISwitch.js/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-wrap-umd": "^0.2.1"
+  }
+}
