@@ -49,7 +49,7 @@ Object.defineProperty(UISwitch.prototype, 'className', {
 
 Object.defineProperty(UISwitch.prototype, 'disabledOpacity', {
     get: function() {
-        return this_disabledOpacity;
+        return this._disabledOpacity;
     },
     set: function(disabledOpacity) {
         this._disabledOpacity = disabledOpacity;
