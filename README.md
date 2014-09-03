@@ -1,4 +1,6 @@
 UISwitch.js
 ===========
 
-Implements Apple's UISwitch in Javascript
+Implementation of Apple's UISwitch in Javascript
+
+Authors: Stephen Corcoran & Daniel Imhoff
