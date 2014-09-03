@@ -28,3 +28,31 @@ Object.defineProperty(UISwitch.prototype, 'deactivatedColor', {
         this._deactivatedColor = deactivatedColor;
     }
 });
+
+Object.defineProperty(UISwitch.prototype, 'transitionTime', {
+    get: function() {
+        return this._transitionTime;
+    },
+    set: function(transitionTime) {
+        this._transitionTime = transitionTime;
+    }
+});
+
+Object.defineProperty(UISwitch.prototype, 'className', {
+    get: function() {
+        return this._className;
+    },
+    set: function(className) {
+        this._className = className;
+    }
+});
+
+Object.defineProperty(UISwitch.prototype, 'disabledOpacity', {
+    get: function() {
+        return this_disabledOpacity;
+    },
+    set: function(disabledOpacity) {
+        this._disabledOpacity = disabledOpacity;
+    }
+});
+
