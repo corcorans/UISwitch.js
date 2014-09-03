@@ -1,5 +1,19 @@
 var UISwitch = function(element, options) {
-   
+    if (typeof options.enabled === 'undefined') {
+        options.enabled = true;
+    }
+
+    if (typeof options.activatedColor === 'undefined') {
+        options.activatedColor = '#4bd963';
+    }
+
+    if (typeof options.deactivatedColor === 'undefined') {
+        options.deactivatedColor = '#ffffff';
+    }
+
+    this._enabled = options.enabled;
+    this._activatedColor = options.activatedColor;
+    this._deactivatedColor = options.deactivatedColor;
 };
 
 Object.defineProperty(UISwitch.prototype, 'enabled', {
@@ -55,4 +69,3 @@ Object.defineProperty(UISwitch.prototype, 'disabledOpacity', {
         this._disabledOpacity = disabledOpacity;
     }
 });
-
