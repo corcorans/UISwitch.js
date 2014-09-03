@@ -11,9 +11,19 @@ var UISwitch = function(element, options) {
         options.deactivatedColor = '#ffffff';
     }
 
+    if (typeof options.transitionTime === 'undefined') {
+        options.transitionTime = 2500;
+    }
+
+    if (typeof options.disabledOpacity === 'undefined') {
+        options.disabledOpacity = 0.5;
+    }
+
     this._enabled = options.enabled;
     this._activatedColor = options.activatedColor;
     this._deactivatedColor = options.deactivatedColor;
+    this._transitionTime = options.transitionTime;
+    this._disabledOpacity = options.disabledOpacity;
 };
 
 Object.defineProperty(UISwitch.prototype, 'enabled', {
