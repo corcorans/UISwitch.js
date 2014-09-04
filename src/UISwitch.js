@@ -20,6 +20,12 @@ var UISwitch = function(element, options) {
     this._activated = element.checked;
 
     this.element.style.display = 'none';
+
+    var uiswitch = document.createElement('span');
+    uiswitch.className = 'uiswitch';
+    var slider = document.createElement('span');
+    uiswitch.appendChild(slider);
+    this.element.parentNode.insertBefore(uiswitch, this.element.nextSibling);
 };
 
 UISwitch.defaultOptions = {
