@@ -5,24 +5,10 @@ var UISwitch = function(element, options) {
         throw new Error("'element' must be a checkbox");
     }
 
-    if (typeof options.enabled === 'undefined') {
-        options.enabled = true;
-    }
-
-    if (typeof options.activatedColor === 'undefined') {
-        options.activatedColor = '#4bd963';
-    }
-
-    if (typeof options.deactivatedColor === 'undefined') {
-        options.deactivatedColor = '#ffffff';
-    }
-
-    if (typeof options.transitionTime === 'undefined') {
-        options.transitionTime = 2500;
-    }
-
-    if (typeof options.disabledOpacity === 'undefined') {
-        options.disabledOpacity = 0.5;
+    for (var option in UISwitch.defaultOptions) {
+        if (!(option in options)) {
+            options[option] = UISwitch.defaultOptions[option];
+        }
     }
 
     this._enabled = options.enabled;
@@ -30,6 +16,14 @@ var UISwitch = function(element, options) {
     this._deactivatedColor = options.deactivatedColor;
     this._transitionTime = options.transitionTime;
     this._disabledOpacity = options.disabledOpacity;
+};
+
+UISwitch.defaultOptions = {
+    enabled: true,
+    activatedColor: '#4bd963',
+    deactivatedColor: '#ffffff',
+    transitionTime: 2500,
+    disabledOpacity: 0.5
 };
 
 Object.defineProperty(UISwitch.prototype, 'enabled', {
