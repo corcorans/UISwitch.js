@@ -1,4 +1,6 @@
 var UISwitch = function(element, options) {
+    options = options || {};
+
     if (typeof options.enabled === 'undefined') {
         options.enabled = true;
     }
