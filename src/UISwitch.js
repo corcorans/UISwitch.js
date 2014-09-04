@@ -16,6 +16,7 @@ var UISwitch = function(element, options) {
     this._deactivatedColor = options.deactivatedColor;
     this._transitionTime = options.transitionTime;
     this._disabledOpacity = options.disabledOpacity;
+    this._activated = element.checked;
 };
 
 UISwitch.defaultOptions = {
@@ -77,5 +78,14 @@ Object.defineProperty(UISwitch.prototype, 'disabledOpacity', {
     },
     set: function(disabledOpacity) {
         this._disabledOpacity = disabledOpacity;
+    }
+});
+
+Object.defineProperty(UISwitch.prototype, 'activated', {
+    get: function() {
+        return this._activated;
+    },
+    set: function() {
+        this._activated = activated;
     }
 });
