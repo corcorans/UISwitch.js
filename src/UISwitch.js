@@ -11,12 +11,15 @@ var UISwitch = function(element, options) {
         }
     }
 
+    this.element = element;
     this._enabled = options.enabled;
     this._activatedColor = options.activatedColor;
     this._deactivatedColor = options.deactivatedColor;
     this._transitionTime = options.transitionTime;
     this._disabledOpacity = options.disabledOpacity;
     this._activated = element.checked;
+
+    this.element.style.display = 'none';
 };
 
 UISwitch.defaultOptions = {
