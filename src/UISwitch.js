@@ -1,7 +1,7 @@
 var UISwitch = function(element, options) {
     options = options || {};
     
-    if (typeof element.type === ‘undefined’ || element.type !== ‘checkbox’) {
+    if (typeof element.type === 'undefined' || element.type !== 'checkbox') {
         throw new Error("'element' must be a checkbox");
     }
     
