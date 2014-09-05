@@ -24,10 +24,12 @@ var UISwitch = function(element, options) {
 };
 
 UISwitch.prototype.create = function() {
-    var uiswitch = document.createElement('span');
+    var uiswitch = document.createElement('span'),
+        slider = document.createElement('span');
+        
     uiswitch.className = 'uiswitch';
-    var slider = document.createElement('span');
     uiswitch.appendChild(slider);
+    
     this.element.parentNode.insertBefore(uiswitch, this.element.nextSibling);
 };
 
