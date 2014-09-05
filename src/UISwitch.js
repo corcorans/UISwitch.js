@@ -18,14 +18,21 @@ var UISwitch = function(element, options) {
     this._transitionTime = options.transitionTime;
     this._disabledOpacity = options.disabledOpacity;
     this._activated = element.checked;
+    
+    this.hide();
+    this.create();
+};
 
-    this.element.style.display = 'none';
-
+UISwitch.prototype.create = function() {
     var uiswitch = document.createElement('span');
     uiswitch.className = 'uiswitch';
     var slider = document.createElement('span');
     uiswitch.appendChild(slider);
     this.element.parentNode.insertBefore(uiswitch, this.element.nextSibling);
+};
+
+UISwitch.prototype.hide = function() {
+    this.element.style.display = 'none';
 };
 
 UISwitch.defaultOptions = {
